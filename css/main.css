@@ -15,7 +15,7 @@ html, body { height: 100%; }
 body {
   background-color: #FFF;
   font: 13.34px Verdana, Helvetica, sans-serif;
-  font-size: small;
+  font-size: medium;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { 
   margin-bottom: 1em; 
   color: #fb4f14;
-  
+  font-size: large;
 }
 p { margin: 1em 0; }
 
