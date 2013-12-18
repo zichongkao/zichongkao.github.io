@@ -14,25 +14,28 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Arial, Helvetica, sans-serif;
+  font: 12px Verdana, Geneva, sans-serif;
   font-size: small;
   text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%; 
+  }
 
 h1 { 
   margin-bottom: 1em; 
-  color: #fb4f14;
-  font-size: xx-large;
-  font-weight:bold;
+  color: #ff6600;
+  font-size: 200%;
+  font-weight: normal;
 }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a         { color: #8085C1; }
+a:hover   { color: #CDBFAC; }
+a:visited { color: #CDBFAC; }
+
+ul  {list-style-position: inside;}
 
 /*****************************************************************************/
 /*
@@ -61,12 +64,17 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 .site {
-  font-size: 115%;
+  font-size: 110%;
   text-align: justify;
   width: 42em;
-  margin: 3em auto 2em;
+  margin: 2em auto 2em;
   line-height: 1.5em;
 }
+
+.header {
+  overflow: hidden;
+  margin-bottom: 1em;
+  border-bottom: 4px solid #eee;}
 
 .header a {
   font-weight: bold;
@@ -75,11 +83,11 @@ a:visited { color: #a0a; }
 
 .title {
   display: inline-block;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .title a {
-  color: #a00;
+  color: #8085C1;
 }
 
 .title a:hover {
