@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Analytics is a Creative Process"
+date:   2013-07-29 02:54:29
+categories: data_science
+---
+
+My initial impression of analytics was that it is a cross between math and programming, and is thus defined by focused, linear thought processes. Doing fraud analytics at Enova was my first experience doing analytics in a real world setting. It made me change my view on this.
+
+3-Step Analytics Process
+========================
+Aaron, my boss at Enova, conceived of the analytics process in the following way:  
+Step 1: Ask a good question  
+Step 2: Find a solution  
+Step 3: Implement the solution  
+
+I found that steps 2 and 3 were pretty much what I had expected of analytics. With a well-defined question in hand, it’d quickly become clear whether or not we’d be able to find a solution since we had limited types of information available to us. If solutions were indeed possible, we’d find a few of the basic ones, develop some metrics, and then use them to select the best solution. Finding better solutions would probably have been a good deal more difficult and diminishing returns would have set in. Because overlaying multiple simple rules have been known to work well, our efforts were better directed at searching for a new problem and finding new solutions. 
+
+(Google overlays simple rules to detect click fraud too. See page 28 of this <a href="http://googleblog.blogspot.com/pdf/Tuzhilin_Report.pdf">report</a>.)
+
+Implementation was also typically straightforward. The algorithms had to run reasonably quickly so that customers could have their applications approved quickly. But this was still in the order of seconds, which wasn’t particularly stringent. Furthermore, methods for running fast queries are quite well-research and well-documented. In essence, we were facing solved problems that weren’t very difficult to begin with.
+
+
+Asking a Good Question
+======================
+So really, the hard part was asking a good question. Initially, I had the bright idea of studying email addresses and found clusters of customers applying with email addresses like:  
+bigdaddy01@yahoo.com  
+bigdaddy02@yahoo.com  
+…  
+bigdaddy12@yahoo.com
+
+So I did end up catching fraudsters. The problem was, these amateurs had already tripped fifty other fraud rules. I hadn’t found anything new.
+
+To ask a good question, one that breaks new ground, one has to adopt a new paradigm. Thinking linearly doesn’t help here since you’d still be beating around the same bush. Instead, lateral thinking and creativity are more helpful. For me, this was difficult because there was very little I could work off of – no theoretical structure in place, no precedent to study, no suggestion on where to look next.  At the start, I was throwing out entirely random questions, hoping that I’d strike it lucky. As expected, this never worked out.
+
+Exploration Loop
+================
+In the end, what did work was a loop I used:  
+1. Ask a small question based on what you have  
+2. Probe into this small question  
+3. Examining the results of the probe  
+4a. If dead end, go back to step 1, starting afresh  
+_b. If promising, go back to step 1, now asking another question based on the new knowledge  
+_c. If bonanza, win!  
+
+This method helped me avoid being bogged down since asking small questions wasn’t so difficult. It was also quite productive because multiple small questions sometimes ended up in very unexpected places which offered me a new perspective. What was difficult was constantly changing gears since step 1 was based on lateral thought processes, but step 2 and 3 were based on focused linear thinking. A bunch of good ideas would pop into my head while I was examining the data. Then an hour later, after drilling down to check out a good idea, I would emerge having forgotten all the other ideas. More frustrating were the times I’d remember the earlier ideas, but forget why I had been so excited about them in the first place.
+
+My big break came when was playing with the data one day and realized that unless fraudsters had been preparing for years to attack us, they wouldn’t have been able to accumulate a large number of varied bank accounts from which to launch attacks. This means that they would have to go online or to the branch and create a bunch of bank accounts. The big question was thus: How do we tell which bank accounts were created together? I probed further and was able to find a way to check that bank accounts were created from the same branch on the same day. Using this signal, we were able to pick out 60% of all fraud with only a 5% false positive rate. The logic behind this is that it is exceedingly unlikely that multiple people would apply for a loan from Enova on a single day and who had also created their bank accounts together in the past.
+
+In general, I found that the need to stay creative amidst intermittent bouts of focused, linear probing was defining of the analytics process. This was a major takeaway for me since my initial impressions were that analytics were all about focused probing only.
+
+–
+
+Edit: <a href="http://www.hilarymason.com/blog/interview-questions-for-data-scientists/">Hilary Mason</a> at Bitly: “Technical competence is useless without the creativity to know where to focus it. I love when people come in with questions and ideas. ”

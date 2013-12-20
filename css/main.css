@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 h1 { 
-  margin-bottom: 1em; 
+  margin-bottom: 0em; 
   color: #ff6600;
   font-size: 200%;
   font-weight: normal;
@@ -32,8 +32,8 @@ h1 {
 p { margin: 1em 0; }
 
 a         { color: #8085C1; }
-a:hover   { color: #CDBFAC; }
-a:visited { color: #CDBFAC; }
+a:hover   { color: #8085C1; }
+a:visited { color: #8085C1; }
 
 ul  {list-style-position: inside;}
 
