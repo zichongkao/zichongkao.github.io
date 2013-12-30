@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deadly storm on the Chicago Mackinac Race 2011"
+title:  "Deadly Storm on the Chicago Mackinac Race 2011"
 date:   2011-12-01 02:54:29
 categories: sailing
 ---
@@ -53,11 +53,10 @@ On reaching the dock, we learned that the yacht Wingnuts had capsized in the sto
 
 I was mostly shocked that people had died on a race that I had participated in. Growing up, I had read about the tragic 1998 Sydney Hobart and 1979 Fastnet races. The deaths in those races had, until now, seemed to have occurred in a different world of tougher, braver sailors. 
 
-Sunrise at the Mackinac Bridge (2013) by Ryan Muzzo:
+Sunrise on the Mackinac Bridge (2013) by Ryan Muzzo:
 
-<a href="\pics\finish.jpg"><img src="\pics\finish.jpg" width="100%" alt="sunrise at mackinac"></a>
+<a href="\pics\finish.jpg"><img src="\pics\finish.jpg" width="100%" alt="Sunrise on the Mackinac Bridge"></a>
 
 The crew of the St Francis:
 
 <a href="\pics\maccrew.jpg"><img src="\pics\maccrew.jpg" width="100%" alt="Crew of the St Francis"></a>
-

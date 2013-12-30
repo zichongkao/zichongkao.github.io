@@ -10,7 +10,7 @@ title: About Kao
   </p>
   <h2>Undergrad</h2>
   <p>
-    I am about to graduate from the University of Chicago. College has been a buffet of knowledge, and I've had an incredible time dabbling in math, statistics, CS and economics. Some of the highlights were Marx's theory of Capitalism, statistical machine learning and Appalachian murder ballads.
+    I am about to graduate from the University of Chicago. College has been a buffet of knowledge, and I've stuffed myself silly with many different kinds of food. It started out with physics, then math, economics, statistics, and CS. Some of the highlights were Marx's theory of Capitalism, point set topology and statistical machine learning.
    </p>
    
   <h2>Data Scientist</h2>
@@ -20,7 +20,7 @@ title: About Kao
 
   <h2>Sailor</h2>
   <p>
-    I grew up sailing and enjoy racing immensely. For the past few years, I have been running the <a href="http://sailclub.uchicago.edu">UChicago Sailing Club</a>. We race 420s in the <a href="http://www.mcsasail.org">Midwest college racing circuit</a>. I've also been doing some keelboat racing: I skippered a J80 at the <a href="http://www.ccedhec.com/">EDHEC Sailing Cup</a> (below), and was bowman on the St. Francis during the ill-fated 2011 Chicago Mackinac Race. 
+    I grew up sailing and enjoy racing immensely. For the past few years, I have been running the <a href="http://sailclub.uchicago.edu">UChicago Sailing Club</a>. We race 420s in the <a href="http://www.mcsasail.org">Midwest college racing circuit</a>. I've also been doing some keelboat racing: I skippered a J80 at the <a href="http://www.ccedhec.com/">EDHEC Sailing Cup</a> (below), and was bowman on the St. Francis during the ill-fated <a href="/sailing/2011/12/01/deadly_storm.html">2011 Chicago Mackinac Race</a>. 
   </p>
   <img src="/pics/edhec.jpg" width="100%" height="100%" style="float:center; border: solid 1px #000;" alt="photo of kao">
   <p>
@@ -33,5 +33,60 @@ title: About Kao
     I was born and raised in Singapore. I spent 2 years in the Singapore Army as a platoon commander of a tank unit. Here's me checking out the Aussie Abrams during a training exercise:
   </p>
   <img src="/pics/aussieabrams.jpg" width="100%" height="100%" style="float:center; border: solid 1px #000;" alt="photo of kao">
-  
+
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.5.1"></script>
+    <script type="text/javascript">
+
+        var w = 960,
+            h = 500,
+            start = Date.now();
+
+        var rings = [
+          {radius: 65 * 1, width: 16, speed: -3e-2},
+          {radius: 65 * 2, width: 16, speed: -2e-2},
+          {radius: 65 * 3, width: 16, speed: -1e-2},
+          {radius: 65 * 4, width: 16, speed: 1e-2},
+          {radius: 65 * 5, width: 16, speed: 2e-2},
+          {radius: 65 * 6, width: 16, speed: 3e-2}
+        ];
+
+        var svg = d3.select("body").append("svg:svg")
+            .attr("width", w)
+            .attr("height", h)
+          .append("svg:g")
+            .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")scale(.6)");
+
+        var ring = svg.selectAll("g")
+            .data(rings)
+          .enter().append("svg:g")
+            .attr("class", "ring")
+            .each(ringEnter);
+
+        d3.timer(function() {
+          var elapsed = Date.now() - start,
+              rotate = function(d) { return "rotate(" + d.speed * elapsed + ")"; };
+
+          ring
+              .attr("transform", rotate)
+            .selectAll("rect")
+              .attr("transform", rotate);
+        });
+
+        function ringEnter(d, i) {
+          var n = Math.floor(2 * Math.PI * d.radius / d.width * Math.SQRT1_2),
+              k = 360 / n;
+
+          d3.select(this).selectAll("g")
+              .data(d3.range(n).map(function() { return d; }))
+            .enter().append("svg:g")
+              .attr("class", "square")
+              .attr("transform", function(_, i) { return "rotate(" + i * k + ")translate(" + d.radius + ")"; })
+            .append("svg:rect")
+              .attr("x", -d.width / 2)
+              .attr("y", -d.width / 2)
+              .attr("width", d.width)
+              .attr("height", d.width);
+        }
+
+    </script>
    </div>
