@@ -41,7 +41,7 @@ Lessons Learnt
 
 2. __Get your hands dirty early.__ Plot your data, eyeball it in a text editor. This'll help you catch the low hanging fruit and get a feel for the data.
 
-3. __Don't rush to code.__ This results from following lessons 1 and 2. Nelson and I spent the first of the four hours planning. By then, everyone else was coding. Even then, we made most of our insights in the last 30 minutes while plotting graphs for the presentation. By then, it was too late to exploit these insights. In hindsight, we should have put off coding and spent more time exploring and planning. 
+3. __Don't rush to code.__ This results from following lessons 1 and 2. Nelson and I spent the first of the four hours planning. By then, everyone else was coding. However, we still ended up making most of our insights in the last 30 minutes while plotting graphs for the presentation. At that point, it was too late to exploit these insights. In hindsight, we should have put off coding and spent more time at the start exploring and planning. 
 
 <br>
 
