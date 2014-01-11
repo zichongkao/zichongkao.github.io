@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "What we did right at the Enova Data Smackdown"
-date:   2014-01-11 02:54:29
+title: "Lessons from Winning the Enova Data Smackdown"
+date: 2014-01-11 02:54:29
 categories: data_science
 ---
 
 Analytics sometimes feels like a lonely pursuit. People work on different problems, making it difficult to figure out how much better you could be doing on yours. 
 
-At the Enova Data Smackdown, we were given 4 hours, a modest dataset, and tasked with determining which customers Enova should spend money marketing to in order to maximize profits. For <a href='http://nelsonauner.com'>Nelson Auner</a> and me, it was a valuable opportunity to study other approaches to the same problem. We ended up winning, but more importantly, these are the reasons why I think we won.
+At the Enova Data Smackdown, we were given four hours, a modest dataset, and tasked with determining which customers Enova should spend money marketing to in order to maximize profits. For <a href='http://nelsonauner.com'>Nelson Auner</a> and me, it was a valuable opportunity to study other approaches to the same problem. We ended up winning, but more importantly, these are the reasons why I think we won.
 
 Two Stage Model
 ===============
@@ -41,7 +41,7 @@ Lessons Learnt
 
 2. __Get your hands dirty early.__ Plot your data, eyeball it in a text editor. This'll help you catch the low hanging fruit and get a feel for the data.
 
-3. __Plan alot.__ This results from following lessons 1 and 2. Nelson and I spent the first of the four hours planning. By then, the rest of the room was coding. In hindsight, I think we should have spent even more time digging around before coding.
+3. __Don't rush to code.__ This results from following lessons 1 and 2. Nelson and I spent the first of the four hours planning. By then, everyone else was coding. Even then, we made most of our insights in the last 30 minutes while plotting graphs for the presentation. By then, it was too late to exploit these insights. In hindsight, we should have put off coding and spent more time exploring and planning. 
 
 <br>
 
