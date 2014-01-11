@@ -5,19 +5,25 @@ date:   2014-01-11 02:54:29
 categories: data_science
 ---
 
-Analytics sometimes feels like a lonely pursuit. People work on different problems, making it difficult to figure out how much better you could be doing on your problem. At the Enova Data Smackdown, we were given 4 hours, a modest dataset, and tasked with finding out which potential customers Enova should spend marketing dollar on to maximize profits. For <a href='http://nelsonauner.com'>Nelson Auner</a> and me, it was a valuable opportunity to see how other people would approach the same problem. We ended up winning, but more importantly, these are the reasons why I think we won.
+Analytics sometimes feels like a lonely pursuit. People work on different problems, making it difficult to figure out how much better you could be doing on yours. 
+
+At the Enova Data Smackdown, we were given 4 hours, a modest dataset, and tasked with determining which customers Enova should spend money marketing to in order to maximize profits. For <a href='http://nelsonauner.com'>Nelson Auner</a> and me, it was a valuable opportunity to study other approaches to the same problem. We ended up winning, but more importantly, these are the reasons why I think we won.
 
 Two Stage Model
 ===============
-The first stage predicted which customers would respond to marketing. The second stage predicted how much revenue customers who responded would generate. A single stage model wrongly interprets non-responding customers as generating 0 revenue when in fact they could be highly profitable or unprofitable had they responded. None of the other finalist seemed to have realized this.
+We used a two stage model to predict customer profitability: The first stage predicted which customers would respond to marketing. The second, how much revenue customers who responded would generate. 
+
+A single stage model wrongly interprets non-responding customers as generating zero revenue when in fact, they could be highly profitable or unprofitable had they responded. None of the other finalist seemed to have realized this.
 
 Classification not Regression
 =============================
 Take a look at the distribution <img src='/pics/enova_graph.jpg' width='50%' style='float: right; margin-left: 1em;'>of customer profitability from the training set.
 
-Isn't this surprising? Profitability isn't normally distributed! Customers are either highly profitable or unprofitable*. All of a sudden, it's no longer important to find out exactly how profitable a customer is. Merely realizing a customer is profitable is good enough. This turns the problem from a regression problem into a classification problem. We thus ran a logistics regression and, to our surprise, the training error was .. zero. 
+Isn't this surprising? Profitability isn't normally distributed! Customers are either highly profitable or unprofitable*. All of a sudden, it's no longer important to find out exactly how profitable a customer is. Merely realizing a customer is profitable is good enough. This turns the problem from a regression problem into a classification problem. 
 
-Granted, by splitting the problem up nicely, the two stage model opened the door to an easy solution to the second stage. Nevertheless, a regression technique would likely have performed more poorly.
+We thus ran a logistics regression and, to our surprise, the training error was .. zero. 
+
+Granted, by splitting the problem up nicely, the two stage model opened the door to an easy solution to the second stage. Nevertheless, a regression technique would likely have performed more poorly as outliers would influence it too strongly.
 
 Eyeballing Data
 ===============
@@ -25,7 +31,9 @@ Here's what we found by plotting various covariates against customer\_id:
 
 <img src='/pics/enova_four.jpg' width='100%' style=''>
 
-There are two underlying datasets! Had we more time, developing separate models for each dataset would have definitely improved performance. And though we didn't exploit this observation, personally, I would have felt embarrassed to have worked on a dataset and not realized a pattern as glaring as this.
+There are two distinct subsets in our data! Given more time, we would have developed separate models for each subset. This would have definitely improved performance. 
+
+Though we didn't exploit this observation, I'm glad we discovered it. In hindsight, I would have been embarrassed to have missed a pattern this glaring.
 
 Lessons Learnt
 ==============
