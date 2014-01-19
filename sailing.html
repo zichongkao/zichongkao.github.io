@@ -4,40 +4,57 @@ title: Kao's Website - Sailing
 ---
 
 <div id="home">
+  <h1>Background</h1>
+    <br>
+    <table>
+      <tr>
+        <td class="date">2011 - 2014:</td> 
+        <td>Ran the <a href="http://sailclub.uchicago.edu">University of Chicago Sailing Club</a>. Raced 420s in the Midwest college racing circuit. Skippered a J80 at the 2013 EDHEC Cup, Brest, France. 
+        <br><br>
+        Bowman on Jairo and Maria De Cruz's St Francis, a 48-foot X482. Did the Chicago Mackinac Race with them in 2011 and 2012. Also raced on Chris Boome's boat with David LaPier in SF over the summer of 2013.</td>
+      </tr>
+      <tr>
+        <td class="date">2008:</td>
+        <td>Entered the army. Didn't have the time nor will to sail hard during my time off. Got into keelboat racing. Won the 2008 Horsburgh Challenge.</td>
+      </tr>
+      <tr>
+        <td class="date">2006 - 2007:</td>
+        <td>I had the idea that I would try make the national team. I took out a long-term rental on a Laser and trained intensively on my own for about a year. Placed 11th overall and 6th youth in the 2007 Singapore Laser Open. </td>
+      </tr>
+      <tr>
+        <td class="date">2003:</td> 
+        <td>Bytes were introduced to Singapore. I was outgrowing the Optimist, and decided to switch over.</td>   
+      </tr>
+      <tr>
+        <td class="date">1999 - 2002:</td> 
+        <td>Raced in the Singapore Optimist Fleet. Best ranking: ~40/200+. </td>
+      </tr>
+      <tr>
+        <td class="date">1999:</td> 
+        <td>Learned to sail on blue wooden Optimists on the Straits of Johor - the waterway separating Singapore from Malaysia. I was ten and my best friend's parents had invited me to join him on the "Get Kids Afloat" course at <a href="http://www.safyc.org.sg/">SAFYC</a>. </td>
+      </tr>
+    </table>
+  
+
+  <h1>Pics</h1>
+    <a href="/pics/ucsailing_420.jpg"><img src="/pics/ucsailing_420.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
+    Coming off rotation. Wet Your Willie Regatta 2012, Northwestern University, IL. <br>
+       
+    <a href="/pics/ucsailing_jpyc.jpg"><img src="/pics/ucsailing_jpyc.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
+    Sunset at Jackson Park Yacht Club, IL with the UChicago Sailing Club.<br>
+    
+    <a href="/pics/st_francis_training.jpg"><img src="/pics/st_francis_training.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
+    Training for the 2012 Chicago Mackinac Race. <br> 
+    
+    <a href="/pics/changi_sailing.jpg"><img src="/pics/changi_sailing.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
+    Before the storm hit. One of my first experiences as skipper. Changi, Singapore, 2009. <br>
+    
   <h1>Sailing Posts</h1>
-  <br />
-  <ul class="posts">
-    {% for post in site.categories.sailing %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-  <h1>Sailing FAQ</h1>
-    <h2>How did you get into sailing?</h2>
-      <p>
-        <img src="/pics/opti.jpg" width="40%" style="float:right; margin-left: 1em; border: solid 1px #000;" alt="Image of an Optimist">
-        I learned to sail on blue wooden Optimists on the Straits of Johor - the waterway separating Singapore from Malaysia. I was 10 and my best friend's parents had invited me to join him on the "Get Kids Afloat" course at <a href="http://www.safyc.org.sg/">SAFYC</a>. That was enough to get me hooked on the special mix of fear, exhilaration and solitude that sailing so reliably dishes out. We signed up for the regular weekly training sessions, and ended up racing the Optimist until we outgrew it 3 years later. 
-      </p>
-    <h2>What do you like about sailing?</h2>  
-     <p>
-        Sailing's like a conversation with the elements. As the wind hits, you feel the hull lift beneath you. You respond by hiking out, pressing the boat down with your weight. Waves strike. You're thrown back and forth. You answer by torquing your upper body, lifting the bow over the crests. Today, most of our existence takes place in our minds. Our bodies seem little more than physical encumbrances. Sailing connects my body and mind again.
-     </p>
-     <p>
-        Sailing also takes me away from regular life both physically and mentally. This allows me to take stock of my life, and think wonderful thoughts that would have never arisen on land. 
-     </p>
-     
-    <h2>Hopes and dreams?</h2>
-      <p>
-        It seems the older I get, the worse of a sailor I become: Most of the serious racing I've done was as a kid. Back then, we went out for 6 hours a day, every Saturday and Sunday, for 40 weeks a year. I'd like to buck the trend and begin training and racing seriously again. Hopefully, in the Laser class - a boat which I know well and love. 
-      </p>
-      <p>
-        Growing up, reading about the Transpac, Fastnet and Sydney Hobart races captured my imagination. I'd like to compete in all the major long distance yacht races. 
-      </p>
-     <h2>Photos!</h2>
-       <a href="/pics/ucsailing_420.jpg"><img src="/pics/ucsailing_420.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
-       Coming off rotation. Wet Your Willie Regatta 2012, Northwestern University, IL.   
-       
-       <a href="/pics/ucsailing_jpyc.jpg"><img src="/pics/ucsailing_jpyc.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
-       Sunset at Jackson Park Yacht Club, IL with the UChicago Sailing Club.  
-       
+    <br />
+    <ul class="posts">
+        {% for post in site.categories.sailing %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
        
 </div>

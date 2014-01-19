@@ -37,6 +37,18 @@ a:visited { color: #8085C1; }
 
 ul  {list-style-position: inside;}
 
+table td {
+  padding:4px;
+}
+
+td.date{
+  color: #8085C1;
+  text-align: right;
+  vertical-align: top;
+  font-weight: bold; 
+  width: 9em;  
+}
+
 /*****************************************************************************/
 /*
 /* Home
