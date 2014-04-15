@@ -37,17 +37,37 @@ a:visited { color: #8085C1; }
 
 ul  {list-style-position: inside;}
 
-table td {
-  padding:4px;
-}
+table,td,tr,th {
+  padding:0px;
+  border-collapse:collapse;
+  text-align: left;
+  font-weight: 400;
+  font-size: 90%
+  }
 
+th {
+  font-weight: 700;
+}
+ 
+tr {
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;  
+} 
+  
 td.date{
   color: #8085C1;
-  text-align: right;
-  vertical-align: top;
-  font-weight: bold; 
-  width: 9em;  
+  font-weight: 700; 
+  width: 4em;  
 }
+
+td.event{
+  width: 18em;
+}
+
+td.role{
+  width: 24em;
+}
+
 
 /*****************************************************************************/
 /*
@@ -78,7 +98,7 @@ td.date{
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 42em;
+  width: 48em;
   margin: 2em auto 2em;
   line-height: 1.5em;
 }
@@ -96,6 +116,7 @@ td.date{
 .title {
   display: inline-block;
   margin-bottom: 1em;
+  margin-right: 1em;
 }
 
 .title a {
