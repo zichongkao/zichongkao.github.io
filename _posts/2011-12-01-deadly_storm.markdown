@@ -7,13 +7,14 @@ categories: sailing
 
 <a href="/pics/chimac.png"><img src="/pics/chimac.png" width="40%" style="float:right; margin-left: 1em; border: solid 1px #000;"></a>
 
-Every year, 300 boats race across Lake Michigan from Chicago to the idyllic island of Mackinac in one of the longest freshwater races in the world. In 2011, a massive storm hit the race killing two sailors. I often feel terrified while sailing, but this was the first time I rationally thought my life was in danger. I wrote this account a few days after the race:
+Every year, 300 boats race across Lake Michigan from Chicago to the idyllic island of Mackinac in one of the longest freshwater races in the world. In 2011, a massive storm hit the race killing two sailors. 
 
 Off we go
 =============
-The race started in front of Chicago on a sunny Saturday morning under a gentle 5-knot breeze. We flew the bird and took off down the rhumb line. By nightfall, we were cruising under 15 knots of breeze. <a href="/pics/bird.jpg"><img src="/pics/bird.jpg" width="40%" style="float:right; margin-left: 1em; border: solid 1px #000;"></a> In the distance, the twinkling lights of the other boats were fading away. Our bet to stick to the rhumb line rather than head north hugging the coast seemed to have paid off. The crew were mighty pleased. We started the watch system: 4 hours on, 4 hours off.
+The race started in front of Chicago on a sunny Saturday morning under a gentle 5-knot breeze. We flew the bird and took off down the rhumb line. By nightfall, we were cruising under 15 knots of breeze.  In the distance, the twinkling lights of the other boats were fading away. Our bet to stick to the rhumb line rather than head north along the coast seemed to have paid off. The crew were mighty pleased. We started the watch system: 4 hours on, 4 hours off.
 
-I came on at 2am and the wind had not quietened. It was eerie to be trimming the sails in total darkness and silence save the swish of water underfoot. It seemed like the race was going to be calm and easy. By 4am, time was beginning to slow. I was delighted when the sky started to brighten and I had the sunrise to watch. 
+I came on at 2am and the wind had not let up. <a href="/pics/bird.jpg"><img src="/pics/bird.jpg" width="40%" style="float:right; margin-left: 1em; border: solid 1px #000;"></a>
+It was eerie to be trimming the sails in total darkness and silence save the swish of water underfoot. It seemed like the race was going to be calm and easy. By 4am, time was beginning to slow. I was delighted when the sky started to brighten and I had the sunrise to watch. 
 
 Over Sunday, the winds picked up still, building to about 20 knots. Huge white dunes on the opposite coast of Lake Michigan came into sight. We nosed downwind, doused the asym and put up our big blue .5 spinnaker also stamped with St Francis’s white dove. “Feed the bird! Feed the bird!” we chanted as we powered downwind with maximum sail area up. With the wind coming from the south, its fetch was the entire length of Lake Michigan, allowing for huge rolling swells to build. We spent an exhilarating afternoon surfing down these swells, competing who could drive the boat faster. When the boat speed hit 12 knots (theoretical max hull speed of the St Francis), cheers went up all around. The old hands were remarking that these were as perfect conditions as they’d ever seen.
 

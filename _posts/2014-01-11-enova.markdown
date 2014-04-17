@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lessons from Winning the Enova Data Smackdown"
+title: "Lessons from the Enova Data Smackdown"
 date: 2014-01-11 02:54:29
 categories: data_science
 ---

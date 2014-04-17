@@ -19,10 +19,14 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-size: 100%; 
   margin-top: 1em;
-  }
+}
+
+h2, h3, h4{
+  font-size: 100%;
+}
 
 h1 { 
   color: #ff6600;
@@ -66,6 +70,20 @@ td.event{
 
 td.role{
   width: 24em;
+}
+
+div.project{
+  border-bottom:1px solid #eee;  
+  float: left;
+  width: 100%;
+  padding: 10px;
+  }
+
+div.project img{
+  width: 30%; 
+  float:left; 
+  margin-right: 1em; 
+  border: solid 1px #000;
 }
 
 

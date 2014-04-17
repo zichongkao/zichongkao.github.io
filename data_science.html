@@ -6,6 +6,21 @@ title: Kao's Website - Data Science
 <div id="home">
   <h1>Data Science</h1>
   <br />
+  <h1>Selected Projects</h1>
+  <br>
+  <div class="project">
+    <img src="/pics/binary_exo_1_mini.png">
+    <h2>Exoplanet and Binary Star Classification</h2>
+    With a dataset consisting light curves of 166,904 stars, Sen Tian and I developed a method to differentiate between exoplanet transitions and eclipsing/occluding binary stars based on the <a href="http://iopscience.iop.org/2041-8205/713/2/L87/pdf/2041-8205_713_2_L87.pdf">Kepler data processing pipeline</a>. 
+    <br><br>We used kernel regression to remove natural flux variation, and then analyzed periodicity and trough geometry to separate the exoplanet transition profiles from binary star profiles.<br>
+  </div>
+
+  <div class="project">
+    <img src="/pics/chic_crime_mini.png">
+    <h2>Chicago Crime Prediction</h2>
+    Working with 13 years of public <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2">Chicago crime data</a>, we modelled occurrences of 10 classes of crimes as Poisson processes. Interestingly, we found that kernel smoothing over adjacent geographical regions, preceding weeks, and seasonal periods over previous years did not improve the model significantly. We theorize that this may be due to the sharp socio-economic divisions between Chicago neighborhoods, and small scale of temporal variations in crime rates. 
+    </div>
+  
   <h1>Posts</h1>
   <ul class="posts">
     {% for post in site.categories.data_science %}
