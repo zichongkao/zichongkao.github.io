@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why Linear Thinking isn't enough for Analytics"
+title:  "Modes of Thinking for Analytics"
 date:   2013-07-29 02:54:29
 categories: data_science
 ---

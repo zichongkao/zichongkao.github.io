@@ -76,7 +76,8 @@ div.project{
   border-bottom:1px solid #eee;  
   float: left;
   width: 100%;
-  padding: 10px;
+  padding: 0px 10px 10px;
+  margin-bottom: 10px;
   }
 
 div.project img{
@@ -86,6 +87,13 @@ div.project img{
   border: solid 1px #000;
 }
 
+div.resource{
+  padding: 5px; 
+}
+
+div.resource  h2{
+  display: inline;
+}
 
 /*****************************************************************************/
 /*

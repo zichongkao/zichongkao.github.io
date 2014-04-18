@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Pathologies of Big Data [Article Review]"
+title:  "Review: The Pathologies of Big Data"
 date:   2013-10-02 02:54:29
 categories: data_science
 ---

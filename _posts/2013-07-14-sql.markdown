@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why you should be Skeptical of SQL Queries"
+title:  "Beware the Big Messy SQL Query"
 date:   2013-07-14 02:54:29
 categories: data_science
 ---
