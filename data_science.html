@@ -21,6 +21,14 @@ title: Kao's Website - Data Science
     Working with 13 years of public <a href="https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2">Chicago crime data</a>, we modelled occurrences of 10 classes of crimes as Poisson processes. Interestingly, we found that kernel smoothing over adjacent geographical regions, preceding weeks, and seasonal periods over previous years did not improve the model significantly. We theorize that this may be due to the sharp socio-economic divisions between Chicago neighborhoods, and small scale of temporal variations in crime rates. 
     </div>
   
+  <div class="project">
+    <img src="/pics/viterbi.png">
+    <h2>Viterbi Algorithm Implemented on Bahasa Melayu</h2>
+    I compiled a list of 89,000 words by scraping 170 classical Malay texts in the <a href="mcp.anu.edu.au">Malay Concordance Project</a> corpus. After constructing a hidden markov model, I then implement the Viterbi algorithm to determine if the vowel-consonant states that seem to underlie the English language are also found in Bahasa Melayu.
+
+  </div>
+  
+  
   <h1>Posts</h1>
   <ul class="posts">
     {% for post in site.categories.data_science %}
