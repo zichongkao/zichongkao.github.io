@@ -59,7 +59,7 @@ I was supposed to leave that night, to get back to SF in time for work on Monday
 
 The Greyhound ride cost a bomb ($66) but I made it back to SF the next day. Here’s a map of the area we covered. Click on image to enlarge.
 
-<a href="/pics/kingsrange.jpq"><img src="/pics/kingsrange.jpg" width="100%" style="border: solid 1px #000;"></a>
+<a href="/pics/kingsrange.jpg"><img src="/pics/kingsrange.jpg" width="100%" style="border: solid 1px #000;"></a>
 
 <img src="/pics/hikers.jpg" width="100%" style="border: solid 1px #000;">
 L to R. Sandy, me, Maria, Chuck, Les, Karen, Patty. Stan is taking the photo.
