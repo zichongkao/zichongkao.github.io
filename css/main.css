@@ -14,30 +14,27 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 12px Verdana, Geneva, sans-serif;
+  font: 14px Garamond;
   font-size: small;
   text-align: center;
-}
-
-h1 {
-  font-size: 100%; 
-  margin-top: 1em;
 }
 
 h2, h3, h4{
   font-size: 100%;
 }
 
-h1 { 
+h1 {
   color: #ff6600;
   font-size: 200%;
   font-weight: normal;
+  margin-top: 1em;
 }
+
 p { margin: 1em 0; }
 
-a         { color: #8085C1; }
-a:hover   { color: #8085C1; }
-a:visited { color: #8085C1; }
+a         { color: #000; }
+a:hover   { color: #222; }
+a:visited { color: #000; }
 
 ul  {list-style-position: inside;}
 
@@ -45,35 +42,35 @@ table,td,tr,th {
   padding:0px;
   border-collapse:collapse;
   text-align: left;
-  font-weight: 400;
-  font-size: 90%
+  font-weight : 400;
+  font-size: 100%
   }
 
 th {
   font-weight: 700;
 }
- 
+
 tr {
   border-top:1px solid #eee;
-  border-bottom:1px solid #eee;  
-} 
-  
+  border-bottom:1px solid #eee;
+}
+
 td.date{
   color: #8085C1;
-  font-weight: 700; 
-  width: 4em;  
+  font-weight: 700;
+  width: 4em;
 }
 
 td.event{
-  width: 18em;
+  width: 14em;
 }
 
 td.role{
-  width: 24em;
+  width: 18em;
 }
 
 div.project{
-  border-bottom:1px solid #eee;  
+  border-bottom:1px solid #eee;
   float: left;
   width: 100%;
   padding: 0px 10px 10px;
@@ -81,14 +78,14 @@ div.project{
   }
 
 div.project img{
-  width: 30%; 
-  float:left; 
+  width: 30%;
+  float:left;
   margin-right: 1em; 
   border: solid 1px #000;
 }
 
 div.resource{
-  padding: 5px; 
+  padding: 5px;
 }
 
 div.resource  h2{
@@ -180,7 +177,7 @@ div.resource  h2{
 }
 
 .footer .contact a {
-  color: #8085C1;
+  color: #000;
 }
 
 .footer .rss {

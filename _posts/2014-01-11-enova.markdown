@@ -1,48 +1,19 @@
 ---
 layout: post
-title: "Lessons from the Enova Data Smackdown"
-date: 2014-01-11 02:54:29
-categories: data_science
+title: "People are Mostly the Same"
+date: 2015-01-27 02:54:29
+categories: writing
 ---
 
-Analytics sometimes feels like a lonely pursuit. People work on different problems, making it difficult to figure out how much better you could be doing on yours. 
+People like to think they are special. They also like to think of others as different. Typically, the first happens when they do well, and the second when the other person does badly. What is common to both beliefs is the notion that there is a part of a person's identity that is quintessentially them, that is distinct from their experiences and associations, that can be used to assignresponsibility for outcomes.
 
-At the Enova Data Smackdown, we were given four hours, a modest dataset, and tasked with determining which customers Enova should spend money marketing to in order to maximize profits. For <a href='http://nelsonauner.com'>Nelson Auner</a> and me, it was a valuable opportunity to study other approaches to the same problem. We ended up winning, but more importantly, these are, in my opinion, the three biggest reasons why we won.
+For many people, the size of this individual identity fluctuates depending on circumstances. In tough times, it shrinks away letting associative identity take the hits. "I'm smoking because all my friends smoked growing up." In good times, it enlarges to take credit for a job well done. "I aced this test because I'm smart." These fluctuations make individual identity seem dynamic and important, giving us the perception that our thoughts and actions, and those of the people around us, are determined by it.
 
-1. Two Stage Model
-===============
-We used a two stage model to predict customer profitability: The first stage predicted which customers would respond to marketing. The second, how much revenue customers who responded would generate. 
+As I have grown older, I have come to realize that individual identity counts for a lot less than people think. There have been a number of situations where I have looked negatively upon someone else's actions, only to be in that same situation later and find myself drawn to the same course of action. And most tellingly, what looked like a character flaw for the other person, often started to seem more like just a tough situation in my case.
 
-A single stage model wrongly interprets non-responding customers as generating zero revenue when in fact, they could be highly profitable or unprofitable had they responded. None of the other finalist seemed to have realized this.
+To be intellectually honest then, is to realize that people aren't so different. People behave differently not so much because they have different quintessential qualities, but because they are in different circumstances.
 
-2. Classification not Regression
-=============================
-Take a look at the distribution <img src='/pics/enova_graph.jpg' width='50%' style='float: right; margin-left: 1em;'>of customer profitability from the training set.
+As such, understanding a person becomes mostly a matter of understanding their circumstances. Being able to place a person within a trope based on which school they attended, what their parents do, or in which city they grew up, explains more variation in their behavior than even self-declared explanations.
 
-Isn't this surprising? Profitability isn't normally distributed! Customers are either highly profitable or unprofitable*. All of a sudden, it's no longer important to find out exactly how profitable a customer is. Merely realizing a customer is profitable is good enough. This turns the problem from a regression problem into a classification problem. 
+But more than helping us understand people, realizing that people aren't so different is good because it encourages empathy. Dismissing people because we think they are different is a blackhole from which we cannot recover. Instead, when we realize that their actions are mostly a result of their circumstances, we are encouraged to understand their circumstances and associations. Through repetition, we learn the distinctive traits of groups, even groups that we don't belong to, and this expands our understanding of other people in the group.
 
-We thus ran a logistics regression and, to our surprise, the training error was .. zero. 
-
-Granted, by splitting the problem up nicely, the two stage model opened the door to an easy solution to the second stage. Nevertheless, a regression technique would likely have performed more poorly as outliers would influence it too strongly.
-
-3. Eyeballing Data
-===============
-Here's what we found by plotting various covariates against customer\_id:
-
-<img src='/pics/enova_four.jpg' width='100%' style=''>
-
-There are two distinct subsets in the data! 
-
-Though we didn't have time to adapt our model based on this observation, I'm glad we discovered it. It showed the judges that we had studied the data, and, in hindsight, I would have been embarrassed to have missed a pattern this glaring.
-
-Lessons Learnt
-==============
-1. __Concentrate on picking the right model class.__ Most likely, in smaller competitions like these, selecting an Adaboost classifier over KNN does little more than entice judges to quiz you about your choice of algorithm.
-
-2. __Get your hands dirty early.__ Plot your data, eyeball it in a text editor. This'll help you catch the low hanging fruit and get a feel for the data.
-
-3. __Don't rush to code.__ This results from following lessons 1 and 2. Nelson and I spent the first of the four hours planning. By then, everyone else was coding. However, we still ended up making most of our insights in the last 30 minutes while plotting graphs for the presentation. At that point, it was too late to exploit these insights. In hindsight, we should have put off coding and spent more time at the start exploring and planning. 
-
-<br>
-
-\* Turns out, the dataset wasn't harvested from Enova's database - it had been engineered for the competition. 

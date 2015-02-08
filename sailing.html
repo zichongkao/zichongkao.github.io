@@ -6,7 +6,7 @@ title: Kao's Website - Sailing
 <div id="home">
   <h1>Sailing Resume</h1>
     <br>
-    <h2>Keelboat Racing<h2>
+    <h2>Keelboat</h2>
       <table>
         <tr>
           <th>Year</th>
@@ -15,22 +15,28 @@ title: Kao's Website - Sailing
           <th>Location</th>
         </tr>
         <tr>
+          <td class="date">2014</td>
+          <td class="event"><a href='http://sydijon.com'>450nm Baltic Sea Passage</a></td>
+          <td class="role">Crew, <em>SY Dijon</em>, a tiny Helsman 23</td>
+          <td class="location">Nyk&ouml;ping, Sweden to Sassnitz, Germany</td>
+        </tr>
+        <tr>
           <td class="date">2014<br>2013</td>
-          <td class="event">EDHEC Cup</td>
+          <td class="event"><a href='http://www.ccedhec.com'>EDHEC Cup</a></td>
           <td class="role">Skipper, UChicago Sailing Team. J80 class</td>
           <td class="location">Sables d'Olonnes (2014), <br>Brest (2013), France</td> 
         </tr>
         <tr>
           <td class="date">2012<br>2011</td>
-          <td class="event">Chicago Mackinac Race<br><a href="/sailing/2011/12/01/deadly_storm.html">Nasty storm in 2011</a></td>
+          <td class="event"><a href='http://www.cycracetomackinac.com'>Chicago Mackinac Race</a><br>Nasty storm in 2011</td>
           <td class="role">Bowman, <em>St Francis</em>. X482. PHRF 2</td>
-          <td class="location">Lake Michigan, USA</td> 
+          <td class="location">Lake Michigan, USA</td>
         </tr>
         <tr>
           <td class="date">2008</td>
           <td class="event">Horsburgh Challenge</td>
           <td class="role">Helmsman, <em>Rainbow</em>. 1st, PY class</td>
-          <td class="location">Straits of Singapore</td> 
+          <td class="location">Straits of Singapore</td>
         </tr>
         <tr>
           <td class="date">2007</td>
@@ -40,7 +46,7 @@ title: Kao's Website - Sailing
         </tr>
       </table>
     <br>
-    <h2>Dinghy Racing<h2>
+    <h2>Dinghy</h2>
       <table>
         <tr>
           <td class="date">2013</td>
@@ -68,19 +74,19 @@ title: Kao's Website - Sailing
         </tr>
       </table>
     <br>
-    <h2>Service<h2>
+    <h2>Organization</h2>
       <table>
         <tr>
           <td class="date">2012</td>
-          <td class="service">Commodore, UChicago Sailing Club</td>
+          <td class="service">Commodore, <a href='http://sailclub.uchicago.edu'>University of Chicago Sailing Club</a></td>
         </tr>
         <tr>
           <td class="date">2013-<br>2011</td>
-          <td class="service">Organizer, Learn-to-Sail Program, UChicago Sailing Club</td>
+          <td class="service">Organizer, Learn-to-Sail Program, University of Chicago Sailing Club</td>
         </tr>
       </table>
     <br>
-    <h2>Skills and Certification<h2>
+    <h2>Skills and Certification</h2>
       <table>
         <tr>
           <td class="skills">Basic Fiberglassing - Restored 6 ancient Flying Juniors to sea-worthiness</td>
@@ -101,22 +107,23 @@ title: Kao's Website - Sailing
 
     <a href="/pics/ucsailing_420.jpg"><img src="/pics/ucsailing_420.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
     Coming off rotation. Wet Your Willie Regatta 2012, Northwestern University, IL. <br>
-       
+
     <a href="/pics/ucsailing_jpyc.jpg"><img src="/pics/ucsailing_jpyc.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
     Sunset at Jackson Park Yacht Club, IL with the UChicago Sailing Club Flying Junior fleet.<br>
-    
+
     <a href="/pics/st_francis_training.jpg"><img src="/pics/st_francis_training.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
     Training for the 2012 Chicago Mackinac Race on the <em>St Francis</em>. <br> 
-    
+
     <a href="/pics/changi_sailing.jpg"><img src="/pics/changi_sailing.jpg" width="100%" style="margin-top: 1em; border: solid 1px #000;"></a>
     Before the storm hit. One of my first experiences as skipper. Changi, Singapore, 2009. <br>
-    
+
   <h1>Related Posts</h1>
     <br />
     <ul class="posts">
         {% for post in site.categories.sailing %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
         {% endfor %}
     </ul>
-       
+
 </div>
