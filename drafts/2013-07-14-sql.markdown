@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Beware the Big Messy SQL Query"
+date:   2013-07-14 02:54:29
+categories: data_science
+---
+
+Everyday, important decisions are made based on large, complex SQL queries. I think that non-technical managers would be shocked at how easy it is to make a mistake, and how different resulting output can be.
+
+2 summers spent reading and writing SQL queries has cultivated in me an instinctive skepticism about all SQL queries I encounter. It might do you well to be similarly skeptical. 
+
+Problem 1: Carelessness
+=======================
+Take a look at this query:
+
+{% highlight SQL %}
+SELECT 
+sales_tab1.sales_order_id
+FROM sales_tab1
+JOIN sales_tab2
+ON sales_tab2.user_id = sales_tab1.user_id
+AND sales_tab2.date - interval '7'day <= sales_tab1.date
+AND sales_tab2.date > sales_tab1.date
+{% endhighlight %}
+
+The intention is to pull up orders that were initiated by users who had placed another order in the 7 days following the first. Can you spot what's wrong?
+
+Here's what's wrong: Let's say a user places an order on 01/03/2013 at 06:12. If the same user makes another order later the same day at 09:45, the second order would be ignored by the query since it only checks dates not times. (ie. the last line is wrong.) The correct query necessarily involves a time comparison. The last line should instead be:
+
+{% highlight SQL %}
+AND CAST(sales_tab2.date as datetime) + CAST(sales_tab2.time as datetime) > 
+    CAST(sales_tab1.date as datetime) + CAST(sales_tab1.time as datetime)
+{% endhighlight %}
+
+This isn't a difficult error to make. But in my case, the difference was huge: The correct query found 100% _more_ orders than the wrong one.
+
+Problem 2: Incomplete Understanding of DB
+=========================================
+The second mistake was one that I personally made. I had been trying to find the percentage of charges that made been marked as fraudulent. To do this, I went to the invoice table and joined the table which had the fraud status, selecting and counting those that had been marked fraud. Little did I know, invoices could be made out for charges, refunds and a host of other transactions. But since only charges could be fraudulent, the fraud rate I obtained was understated by 70%. This means that I would have called a 1.00% fraud rate a 0.59% fraud rate.
+
+This made me think: What if there were some other invoices attributes that I was missing out on? This was a clear instance of not knowing what I didn’t know and it was a sobering thought. I figured that the solution would be to gain a complete understanding of all fields in all the tables. All 584 of them. But it seemed that no one in the company had such a comprehensive understanding, and to track down the various people responsible for the various bits of the database would have taken at least a year. To make things worst, by the time the hero had cracked the entire database, he, by virtue of his incredible tenacity and comprehensive understanding of the company’s operations, should have become prime candidate for promotion to a position where he would not have to write any SQL queries himself.
+
+Implications
+============
+External verification is critical
+---------------------------------
+Pulling data isn't like programming: There are no compilers to throw errors, nor unit tests to run. The only way to find out if you've screwed up is to take another route that should bring you to the same destination. 
+
+Using another method for verification will be painful. (Otherwise, you should have used the second method the first time!) Don't expect the two results to match perfectly. Every database has it's little nuances and discrepancies that make it virtually impossible for two different queries to give identical results. But as I said: This is probably the only way to verify that your query runs as intended.
+
+Data analysts must be able to write SQL
+---------------------------------------
+The person who analyzes the data and delivers the conclusions needs to be the same person who looks at the raw data and writes the queries. This is the only way that the conclusions that are drawn are based precisely on the clauses of the queries.
+
+Efficiency is another reason why this is important. Analytics isn’t a one way process where the manager asks a question which the analyst answers. It is an exploratory process in which the analyst tries to uncover what’s going on by asking new questions with each new vantage point he arrives at. Following his nose, he doesn’t often end up where he expected. As such, having to go back and forth between the asker of questions and the finder of answers is disruptive and takes a long time. Better that the two reside in the same head.
+
+Managers take things on faith not fact
+--------------------------------------
+Managers must understand that there is a vast distance between them and the Truth. This distance is traversed by the analyst. Even if the manager reads the queries or writes some checks, it will be very difficult to verify the analyst’s work completely and we already know that the tiniest of errors can result in dramatic differences. As such, when an analyst presents a conclusion drawn from the data, the manager must understand that she is not being presented with the Truth, but a test of her faith in his meticulousness, diligence and carefulness.

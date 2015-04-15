@@ -27,7 +27,6 @@ h1 {
   color: #ff6600;
   font-size: 200%;
   font-weight: normal;
-  margin-top: 1em;
 }
 
 p { margin: 1em 0; }
@@ -67,6 +66,10 @@ td.event{
 
 td.role{
   width: 18em;
+}
+
+div {
+  overflow: hidden;
 }
 
 div.project{
