@@ -58,7 +58,17 @@ Marshall sets up workers party after botched attempt to challenge LKY to a fight
 
 So weird to read about PAP complaining about "flagrant bias" in the Straits Times pp 298.
 
-"all dressed in white to symbolise clean government - there would be none of the corruption that had been rife in teh past in Singaproe and existed in many other new countries
+"all dressed in white to symbolise clean government - there would be none of the corruption that had been rife in teh past in Singaproe and existed in many other new countries (308)
 
-"deep social, economic, and political grevances were driving the Chinese-educated to support the communists and to help them overthrow the existing order. "
+"never been able to get the Enflish-educated to understand that deep social, economic, and political grevances were driving the Chinese-educated to support the communists and to help them overthrow the existing order. " (309)
+
+On the importance of airconditioning : "To gie of their best, the ministers had to have air-conditioned offices. That may sound odd, but without air-conditioning, efficient work in tropicl Singapore would not have been feasible." (316)
+
+Identifies problem: "Only then would we be able to tackle the lack of a Malayan consciousness among the Chinese, and imbue them wit ha commitment and loyalty to the country of their adoption; and this was all-important for they had to change their attitude before the Malay leaders in Kuala Lumpur would agree to merger" (319)
+
+Women: "we shared the view that one reason for the backwardness of China and the rest of Asia, except Japan, was that women had not been emancipated. They had to be put on a part wit hteh men, given the same education adn enabled to make their full contribution to society." (325)
+
+Flag: "Chinese wanted red for good fortune, the Malays red and white , their tradtional colours for courage and purity. But Indonesia alrady had red and white for their flag, and so had Poland. The Chinese, influenced by the five yellow starts on teh flag of Communist China, wanted stars. The Malays wanted a crecent moon... " (343)
+
+
 
