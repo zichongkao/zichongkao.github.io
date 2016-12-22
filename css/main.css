@@ -14,7 +14,8 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 14px Garamond;
+  font-family: 'PT Serif', serif;
+  font-size: 14px;
   font-size: small;
   text-align: center;
 }
@@ -111,7 +112,7 @@ div.resource  h2{
 
 .posts span {
   color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
+  font-family: 'PT Serif', serif;
   font-size: 80%;
 }
 

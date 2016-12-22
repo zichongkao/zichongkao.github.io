@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Metrics for valuing companies"
+title: "Metrics for Valuing Companies"
 date: 2015-07-25 02:54:49
 categories: investing
 ---
