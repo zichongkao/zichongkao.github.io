@@ -1,12 +1,9 @@
--------
+---
 layout: post
-title: "Ideas are trees"
+title: "Ideas are Trees"
 date: 2014-11-11 02:54:29
 categories:
--------
-
-Ideas
-====
+---
 
 A graph [1] is common way that people visualize a set of ideas. But I think that a tree [1] is a better depiction because it gives us some insight into how ideas are ordered. In the first place, networks and trees aren't too different: A tree is mostly [2] just a network that has been picked up by one node, the most fundamental axiomatic node, and lifted off the ground. The main new factor is the gravity we have applied which serves to order the ideas by their fundamental-ness.
 
