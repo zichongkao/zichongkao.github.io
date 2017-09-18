@@ -55,10 +55,24 @@ tr {
   border-bottom:1px solid #eee;
 }
 
-td.date{
+td.year{
   color: #8085C1;
   font-weight: 700;
   width: 4em;
+}
+
+td.date{
+  color: #8085C1;
+  font-weight: 700;
+  width: 7em;
+}
+
+td.route{
+  width: 20em;
+}
+
+td.grade{
+  width: 8em;
 }
 
 td.event{
