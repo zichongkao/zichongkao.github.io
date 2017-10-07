@@ -15,18 +15,17 @@ html, body { height: 100%; }
 body {
   background-color: #FFF;
   font-family: 'PT Serif', serif;
-  font-size: 14px;
-  font-size: small;
+  font-size: 16px;
   text-align: center;
 }
 
 h2, h3, h4{
-  font-size: 100%;
+  font-size: 24px;
 }
 
 h1 {
   color: #ff6600;
-  font-size: 200%;
+  font-size: 28px;
   font-weight: normal;
 }
 
@@ -56,13 +55,11 @@ tr {
 }
 
 td.year{
-  color: #8085C1;
   font-weight: 700;
   width: 4em;
 }
 
 td.date{
-  color: #8085C1;
   font-weight: 700;
   width: 7em;
 }
@@ -115,20 +112,6 @@ div.resource  h2{
 /* Home
 /*
 /*****************************************************************************/
-.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
-
-.posts li {
-  line-height: 1.75em;
-}
-
-.posts span {
-  color: #aaa;
-  font-family: 'PT Serif', serif;
-  font-size: 80%;
-}
 
 /*****************************************************************************/
 /*
@@ -137,7 +120,6 @@ div.resource  h2{
 /*****************************************************************************/
 
 .site {
-  font-size: 110%;
   text-align: justify;
   width: 48em;
   margin: 2em auto 2em;
@@ -214,7 +196,26 @@ div.resource  h2{
 /*
 /*****************************************************************************/
 
+.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+  width: 40em;
+}
+
+.posts li {
+  line-height: 1.75em;
+}
+
+.posts span {
+  color: #aaa;
+}
+
 /* standard */
+.post {
+  width: 40em;
+
+}
+
 .post pre {
   border: 1px solid #ddd;
   background-color: #eef;
