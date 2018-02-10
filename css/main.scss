@@ -21,14 +21,20 @@ body {
   text-align: center;
 }
 
-h2, h3, h4{
-  font-size: 24px;
-}
-
 h1 {
   color: #ff6600;
   font-size: 28px;
-  font-weight: normal;
+  font-family: 'Robato', sans-serif;
+}
+
+h2, h3 {
+  font-size: 24px;
+  font-family: 'Robato', sans-serif;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: 'Robato', sans-serif;
 }
 
 p { margin: 1em 0; }
@@ -129,41 +135,37 @@ div.resource  h2{
 }
 
 .header {
+  margin-bottom: 1em;
   overflow: hidden;
-  margin-bottom: 1em;
-  border-bottom: 4px solid #eee;}
 
-.header a {
-  font-weight: bold;
-  text-decoration: none;
+  .logo {
+    height: 32px;
+    float: left;
+    margin-right: 1em;
+  }
+
+  .headerlinks {
+    font-family: 'Robato', sans-serif;
+    border-bottom: 4px solid #eee;
+    height: 28px;  // logo height = border width + headerlinks height
+
+    a {
+      font-weight: bold;
+      vertical-align: sub;
+      text-decoration: none;
+    }
+
+    a.extra {
+      color: #aaa;
+      margin-left: 1em;
+    }
+
+    a.extra:hover {
+      color: #000;
+    }
+  }
 }
 
-.title {
-  display: inline-block;
-  margin-bottom: 1em;
-  margin-right: 1em;
-}
-
-.title a {
-  color: #8085C1;
-}
-
-.title a:hover {
-  color: #000;
-}
-
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
 
 .footer {
   font-size: 80%;
@@ -171,25 +173,25 @@ div.resource  h2{
   border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
-}
 
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
+  .contact {
+    float: left;
+    margin-right: 3em;
+  }
 
-.footer .contact a {
-  color: #000;
-}
+  .contact a {
+    color: #000;
+  }
 
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
+  .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right;
+  }
 
-.footer .rss img {
-  border: 0;
+  .rss img {
+    border: 0;
+  }
 }
 
 /*****************************************************************************/
@@ -197,6 +199,11 @@ div.resource  h2{
 /* Posts
 /*
 /*****************************************************************************/
+
+.meta {
+  font-family: 'Robato', sans-serif;
+  color: #aaa;
+}
 
 // common code formatting
 pre {

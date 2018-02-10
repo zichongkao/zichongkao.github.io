@@ -14,18 +14,23 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="icon" type="image/png" href="/favicon.png" >
+        <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
+        // thanks to https://favicon.io/
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     </head>
     <body>
 
         <div class="site">
           <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/index.html">about</a>
-            <a class="extra" href="/writing.html">writing</a>
-            <a class="extra" href="/sailing.html">sailing</a>
-            <a class="extra" href="/climbing.html">climbing</a>
+            <a href="/"><img class="logo" src="/pics/logo.png"></a>
+            <div class="headerlinks">
+              <a class="extra" href="/index.html">about</a>
+              <a class="extra" href="/writing.html">writing</a>
+              <a class="extra" href="/sailing.html">sailing</a>
+              <a class="extra" href="/climbing.html">climbing</a>
+            </div>
           </div>
 
           {{ content }}
