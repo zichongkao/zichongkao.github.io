@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: nb_post
 date: 2018-02-08
-title: "Why Not To Buy-The-Dip?"
+title: "The Futility of Buying the Dip"
 ---
 
 ### Background
@@ -26,24 +26,17 @@ I obtained daily historical data of the S&P 500 from Yahoo Finance and did some 
 df = pd.read_csv('yahoo_s&p500_historical.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 
-# yahoo finance's data is in reverse chronological order which is convenient for us to start from the future 
-# and work backwards to find the dips.
+# Yahoo Finance data in reverse chronological order.
+# Start from the future, use 'rolling' to work backwards to find the dips.
 df['One Day Low'] = df['Close'].rolling(1+1, min_periods=1).min()
 df['Ten Day Low'] = df['Close'].rolling(1+10, min_periods=1).min()
 df['Hundred Day Low'] = df['Close'].rolling(1+100, min_periods=1).min()
 df['Thousand Day Low'] = df['Close'].rolling(1+1000, min_periods=1).min()
 
-# now sort the entries in chronological order so we can iterate through them later.
+# Sort the entries in chronological order so we can iterate through them later.
 df.sort_values('Date', inplace=True)
-```
-
-
-```python
 df.tail()
 ```
-
-
-
 
 <div>
 <table border="1" class="dataframe">
@@ -150,6 +143,7 @@ This is a simple abstraction for modeling my investment account. It serves a few
 
 ```python
 import collections
+ANNUAL_BUSINESS_DAYS = 250
 class Account:
     def __init__(self, start_hdg, annual_interest=0.01):
         self.start_hdg = start_hdg
@@ -168,7 +162,8 @@ class Account:
         self.cur_hdg[asset] = self.cur_hdg.get(asset, 0) + amt
         
     def budget_buy(self, asset, amt, unit_price):
-        amt = np.floor(amt * 1e6) / 1e6  # prevent going over budget due to rounding errors
+        # prevent going over budget due to rounding errors
+        amt = np.floor(amt * 1e6) / 1e6
         total_expenditure = amt * unit_price
         if total_expenditure > self.cur_hdg['cash']:
             vetted_amt = self.cur_hdg['cash'] / unit_price
@@ -179,7 +174,8 @@ class Account:
             
     def update_networth(self, date, cur_asset_prices):
         cur_asset_prices['cash'] = 1.0
-        networth = sum(amt * cur_asset_prices[asset] for asset, amt in self.cur_hdg.items())
+        networth = sum(amt * cur_asset_prices[asset]
+                       for asset, amt in self.cur_hdg.items())
         self.hist_networth.append([date, networth] + list(self.cur_hdg.values()))
         
     def earn_interest(self, interest):
@@ -187,7 +183,7 @@ class Account:
         
     def process_day(self, date, cur_asset_prices, daily_interest=True):
         if daily_interest:
-            self.earn_interest(self.annual_interest / 250) # assume 250 business days a year.
+            self.earn_interest(self.annual_interest / ANNUAL_BUSINESS_DAYS)
         self.update_networth(date, cur_asset_prices)
         
 ```
@@ -208,7 +204,7 @@ accounts.append({'name': 'thousand_day', 'account': Account({'cash': 100000}), '
 
 ```python
 data_range = df[df.Date > pd.to_datetime('1980-01-01')]
-daily_salary = 100000 / 250.0
+daily_salary = 100000.0 / ANNUAL_BUSINESS_DAYS
 ```
 
 
@@ -218,7 +214,7 @@ for _, row in data_range.iterrows():
         account_object = account['account']
         account_object.cur_hdg['cash'] += daily_salary
         
-        # Check the low for the given lookahead period. 
+        # Check the low for the given lookahead period.
         # If that low occurs today, buy with what you have. Otherwise, wait.
         if row['Close'] <= row[account['low_column']]:
             account_object.budget_buy('s&p', account_object.cur_hdg['cash'] / row.Close, row.Close)
@@ -233,9 +229,9 @@ for account in accounts:
     account_df = pd.DataFrame(account['account'].hist_networth, columns=['Date', 'Networth', 'cash', 's&p'])
     account.update({'account_df': account_df})
     final_row = account_df.iloc[-1,:]
-    final_results.append({'Net Worth (MM)': final_row['Networth']/1e6, 
-                          'Cash': final_row['cash'], 
-                          'Stock': final_row['s&p'], 
+    final_results.append({'Net Worth (MM)': final_row['Networth']/1e6,
+                          'Cash': final_row['cash'],
+                          'Stock': final_row['s&p'],
                           'Strategy':account['name']})
 ```
 
@@ -248,8 +244,6 @@ greedy_networth = final_df[final_df['Strategy']=='greedy']['Net Worth (MM)'][0]
 final_df['Net Worth Increase (%)'] = 100 * (final_df['Net Worth (MM)']/greedy_networth - 1)
 final_df
 ```
-
-
 
 
 <div>
@@ -315,7 +309,6 @@ The startling result is that a *thousand* days of perfect foresight over a 25 ye
 
 
 ```python
-plt.figure(figsize=(14,10))
 for account in accounts:
     df = account['account_df']
     plt.plot(df['Date'], df['Networth']/1e3, label=account['name'], linewidth=1.5)
@@ -324,20 +317,10 @@ plt.ylabel('Thousands of Dollars')
 plt.title('Networth over Time')
 ```
 
-
-
-
-    <matplotlib.text.Text at 0x7f6addb25400>
-
-
-
-
-<img src="/pics/output_14_1.png" width="600x">
-
+<img src="/pics/output_14_1.png">
 
 
 ```python
-plt.figure(figsize=(14,10))
 for account in accounts:
     df = account['account_df']
     plt.plot(df['Date'], df['s&p']/1e3, label=account['name'], linewidth=1.5)
@@ -347,14 +330,7 @@ plt.title('Stock Holdings over Time')
 ```
 
 
-
-
-    <matplotlib.text.Text at 0x7f6add071eb8>
-
-
-
-
-<img src="/pics/output_15_1.png" width="600x">
+<img src="/pics/output_15_1.png">
 
 
 This graph shows the stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn't purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
