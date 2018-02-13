@@ -15,18 +15,18 @@ I made some very strong simplifying assumptions. You should feel free to skip th
 4. I assumed a pure buy-and-hold strategy. We don't have to think about selling, only when to buy and how much.
 
 ### Strategies
-Assumption 4 simplifies things a lot, leaving us with one clean problem: Stock appreciates in the long run, so we want to figure out how to buy as much as possible as cheaply as possible. Often this means buying as soon as possible except when we think it's going to be cheaper at some point in future.
+Assumption 4 simplifies things a lot, leaving us with one clean problem: Stock appreciates in the long run, so we want to figure out how to buy as much as possible, as cheaply as possible. Often this means buying as soon as possible except when we think it's going to be cheaper at some point in future.
 
-The naive way to study buying the dip would be to test out different ways of predicting (guessing) the dips. However, there are infinite techniques for making these predictions. So even if one strategy doesn't work out, it doesn't negate the *class* of strategies.
+The naive way to study buying the dip would be to test out different ways of predicting (guessing) the dips. However, there are infinite techniques for making these predictions. So even if one strategy doesn't work, it doesn't negate the *class* of strategies.
 
-One ingenious thing we can do is to say: "Forget about the individual strategies. Let's just test the perfect strategy and the naive strategy and see how they stack up." The perfect strategy is very simply, knowing the future, which we can do since we're backtesting. In fact there are a range of perfect strategies depending on how far into the future the strategy is able to see. Each strategy then checks if there is a dip in sight, ie. a point were the price is the lowest, and saves up money to buy stock then.
+An ingenious way we can overcome this is to reframe the problem: "Forget about the individual strategies. Let's just test the perfect strategy against the naive strategy and see how they compare." The perfect strategy is quite simply knowing the future, which we can test with the benefit if hindsight. In fact there are a range of perfect strategies depending on how far into the future the strategy is able to see. Each strategy then checks if there is a dip in sight, ie. a point were the price is the lowest, and saves up money to buy stock then.
 
-One the other end of the spectrum is the naive strategy that has absolutely no foresight. As mentioned before, if we have no idea about the future except that stock appreciates in the long run, the best we can do is to buy as much as possible, right now.
+One the other end of the spectrum is the naive strategy that has absolutely no foresight. As mentioned before, if we have no idea about the future except that stock appreciates in the long run, the best we can do is to buy as much as possible right now.
 
 In this analysis, I tested strategies with zero (naive), one, ten, hundred and thousand business days of foresight.
 
 ### Results
-The astounding thing is that the thousand day strategy only saw a *14.6% increase* in net worth after 35 years (1980-2016). A thousand business days is roughly 4 years. The improbability of picking out the right day in a 4 year period, and the intestinal fortitude needed to sit on 2 years (expected value) of savings and go all in on that one day, makes this 14.6% payoff seem rather measly.
+The astounding thing is that the thousand day strategy only saw a *14.6% increase* in net worth after 35 years (1980-2016). A thousand business days is roughly 4 years. The improbability of picking out the right day in a 4 year period, and the intestinal fortitude needed to sit on 2 years (expected value) of savings and go all in on that one fateful day, makes this 14.6% payoff seem rather measly.
 
 <div>
 <table border="1" class="dataframe">
@@ -44,46 +44,54 @@ The astounding thing is that the thousand day strategy only saw a *14.6% increas
     <tr>
       <th>0</th>
       <td>greedy</td>
-      <td>21.132840</td>
-      <td>0.001568</td>
-      <td>9931.732545</td>
-      <td>0.000000</td>
+      <td>21.13</td>
+      <td>0.0016</td>
+      <td>9931.73</td>
+      <td>0.00</td>
     </tr>
     <tr>
       <th>1</th>
       <td>one_day</td>
-      <td>21.277338</td>
+      <td>21.28</td>
       <td>0.001068</td>
-      <td>9999.641588</td>
-      <td>0.683758</td>
+      <td>9999.64</td>
+      <td>0.68</td>
     </tr>
     <tr>
       <th>2</th>
       <td>ten_day</td>
-      <td>21.686928</td>
-      <td>0.000653</td>
-      <td>10192.135118</td>
-      <td>2.621925</td>
+      <td>21.69</td>
+      <td>0.0007</td>
+      <td>10192.14</td>
+      <td>2.62</td>
     </tr>
     <tr>
       <th>3</th>
       <td>hundred_day</td>
-      <td>22.845556</td>
-      <td>0.000647</td>
-      <td>10736.651896</td>
-      <td>8.104521</td>
+      <td>22.85</td>
+      <td>0.0006</td>
+      <td>10736.65</td>
+      <td>8.10</td>
     </tr>
     <tr>
       <th>4</th>
       <td>thousand_day</td>
-      <td>24.231639</td>
-      <td>0.001233</td>
-      <td>11388.065063</td>
-      <td>14.663429</td>
+      <td>24.23</td>
+      <td>0.0012</td>
+      <td>11388.07</td>
+      <td>14.66</td>
     </tr>
   </tbody>
 </table>
 </div>
+
+This graph shows the net worth of the strategies over time. You can see how closely they follow each other. The boom and bust cycles appear to be more than 4 years long, so perhaps we would need five thousand days of foresight to see a significant advantage.
+<img src="/pics/output_14_1.png">
+
+The next graph gives us a perspective on the underlying stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn't purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
+<img src="/pics/output_15_1.png">
+
+No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it optimal to slowly accumulate stock. It was during these long periods of incremental growth that *all* strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding and making the buy-the-dip strategies only marginally better than the naive strategy especially given all the work that they require.
 
 
 ### The Grunt Work
@@ -308,7 +316,7 @@ for account in accounts:
                           'Strategy':account['name']})
 ```
 
-#### 5. Plotting Results
+#### 4. Plot Results
 
 
 ```python
@@ -316,7 +324,7 @@ final_df = pd.DataFrame(final_results)[['Strategy', 'Net Worth (MM)', 'Cash', 'S
 greedy_networth = final_df[final_df['Strategy']=='greedy']['Net Worth (MM)'][0]
 final_df['Net Worth Increase (%)'] = 100 * (final_df['Net Worth (MM)']/greedy_networth - 1)
 final_df
-# displays the table above
+# Displays the table above
 ```
 
 ```python
@@ -326,10 +334,8 @@ for account in accounts:
 plt.legend(loc='upper left')
 plt.ylabel('Thousands of Dollars')
 plt.title('Networth over Time')
+# Displays the net worth graph above
 ```
-
-<img src="/pics/output_14_1.png">
-
 
 ```python
 for account in accounts:
@@ -338,16 +344,6 @@ for account in accounts:
 plt.legend(loc='upper left')
 plt.ylabel('Units of S&P500 Stock')
 plt.title('Stock Holdings over Time')
+# Displays the stock holdings graph above
 ```
-
-<img src="/pics/output_15_1.png">
-
-This graph shows the stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn’t purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
-
-No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it most optimal to slowly accumulate stock. And it was during these long periods of incremental growth that all strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding.
-
-
-This graph shows the stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn't purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
-
-No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it most optimal to slowly accumulate stock. And it was during these long periods of incremental growth that all strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding. 
 
