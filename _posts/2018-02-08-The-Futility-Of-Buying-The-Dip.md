@@ -5,21 +5,92 @@ title: "The Futility of Buying the Dip"
 ---
 
 ### Background
-I did this analysis in 2016, after graduating from college and working for two years. At that point, I had not invested a single cent in the stock market because I thought that it was overpriced and that I was being smart by sitting it out and waiting for the big crash before going in. This analysis convinced me otherwise.
+This is an analysis I did in 2016 to convince myself that buying the dip is smart. At that point, I had two years of savings but not invested anything in the stock market because I thought that it was overpriced and that I would be better off sitting it out and going in after the inevitable big crash. Ironically, this analysis convinced me not to try to buy the dip and I ended up investing everything I had immediately after.
 
-### Method
-I simplified things by only looking at stocks and by using the S&P500 as a proxy for a stock portfolio. I assumed that we don't use financial derivatives, and even ignored selling altogether - once a stock is bought, I assumed we hold it forever. This seems a little contrived, but in practice, many people do end up buying and holding vanilla index funds.
+### Assumptions
+I made some very strong simplifying assumptions. You should feel free to skip this post if they seem too naive to you. I considered them reasonable given the level of effort, risk and sophistication that I desired, but they certainly don't make sense for everyone.
+1. I only looked at stocks, specifically the S&P500, as a proxy for an investment portfolio.
+2. I ignore dividends and only consider the capital gains of stock.
+3. I assumed that we don't use financial derivatives.
+4. I assumed a pure buy-and-hold strategy. We don't have to think about selling, only when to buy and how much.
 
-I compared two strategies:
-- The greedy strategy, where I buy as much as I can as soon as I can, and
-- The buy-the-dip stategy where I wait for sharp declines before buying. 
+### Strategies
+Assumption 4 simplifies things a lot, leaving us with one clean problem: Stock appreciates in the long run, so we want to figure out how to buy as much as possible as cheaply as possible. Often this means buying as soon as possible except when we think it's going to be cheaper at some point in future.
 
-These two stategies actually bookmark the spectrum of forecasting ability. If we have no ability to forecast the future beyond the knowledge that stocks rise in the long term, the greedy strategy is best. If we have perfect knowledge of the future, we can wait until the right time and buy then. 
+The naive way to study buying the dip would be to test out different ways of predicting (guessing) the dips. However, there are infinite techniques for making these predictions. So even if one strategy doesn't work out, it doesn't negate the *class* of strategies.
 
-Perfect knowledge and the buy-the-dip strategy is clearly the best. But I wanted to know exactly how much better it is so I could decide if I should attempt to move in that direction. I also wanted to know given a more realistic forecasting ability, how well the strategy would perform. An elegant way to test this was to vary the time period that the algorithm was allowed to peek into the future. 
+One ingenious thing we can do is to say: "Forget about the individual strategies. Let's just test the perfect strategy and the naive strategy and see how they stack up." The perfect strategy is very simply, knowing the future, which we can do since we're backtesting. In fact there are a range of perfect strategies depending on how far into the future the strategy is able to see. Each strategy then checks if there is a dip in sight, ie. a point were the price is the lowest, and saves up money to buy stock then.
 
-### 1. Preparing Data
-I obtained daily historical data of the S&P 500 from Yahoo Finance and did some basic preparation of the data.
+One the other end of the spectrum is the naive strategy that has absolutely no foresight. As mentioned before, if we have no idea about the future except that stock appreciates in the long run, the best we can do is to buy as much as possible, right now.
+
+In this analysis, I tested strategies with zero (naive), one, ten, hundred and thousand business days of foresight.
+
+### Results
+The astounding thing is that the thousand day strategy only saw a *14.6% increase* in net worth after 35 years (1980-2016). A thousand business days is roughly 4 years. The improbability of picking out the right day in a 4 year period, and the intestinal fortitude needed to sit on 2 years (expected value) of savings and go all in on that one day, makes this 14.6% payoff seem rather measly.
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Strategy</th>
+      <th>Net Worth (MM)</th>
+      <th>Cash</th>
+      <th>Stock</th>
+      <th>Net Worth Increase (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>greedy</td>
+      <td>21.132840</td>
+      <td>0.001568</td>
+      <td>9931.732545</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>one_day</td>
+      <td>21.277338</td>
+      <td>0.001068</td>
+      <td>9999.641588</td>
+      <td>0.683758</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ten_day</td>
+      <td>21.686928</td>
+      <td>0.000653</td>
+      <td>10192.135118</td>
+      <td>2.621925</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>hundred_day</td>
+      <td>22.845556</td>
+      <td>0.000647</td>
+      <td>10736.651896</td>
+      <td>8.104521</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>thousand_day</td>
+      <td>24.231639</td>
+      <td>0.001233</td>
+      <td>11388.065063</td>
+      <td>14.663429</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+### The Grunt Work
+The data analysis was quite straightforward. Here's the code in case you want to play around with it.
+
+#### 1. Preparing Data
+I obtained daily historical data of the S&P 500 from Yahoo Finance and did some basic preparation of the data. You can download it <a href='https://https://github.com/zichongkao/zichongkao.github.io/yahoo_s&p500_historical.csv'>here</a>.
 
 
 ```python
@@ -133,7 +204,7 @@ df.tail()
 
 
 
-### 2. Account Abstraction
+#### 2. Account Abstraction
 This is a simple abstraction for modeling my investment account. It serves a few basic functions:
 1. Tracks current holdings of stock and cash. (`self.cur_hdg`)
 2. Records historical net worth, ie. the total dollar value of all holdings on each day. (`self.hist_networth`)
@@ -188,7 +259,7 @@ class Account:
         
 ```
 
-### 3. Run Models
+#### 3. Run Models
 I created five investment accounts, each starting with \$100K, earning \$100K annually, and having its own investment strategy. As mentioned before, the greedy model bought as much stock as it could, as soon as it could. The other four were buy-the-dip strategies with the ability to pick dips by looking 1, 10, 100 and 1000 days into the future.
 
 
@@ -207,6 +278,7 @@ data_range = df[df.Date > pd.to_datetime('1980-01-01')]
 daily_salary = 100000.0 / ANNUAL_BUSINESS_DAYS
 ```
 
+I iterated through the days in the time period, earning salary, making buying decisions and recording my networth each day.
 
 ```python
 for _, row in data_range.iterrows():
@@ -222,6 +294,7 @@ for _, row in data_range.iterrows():
         account_object.process_day(row.Date, {'s&p': row['Close']})
 ```
 
+Now we just have to extract the data stored in our account objects.
 
 ```python
 final_results = []
@@ -235,7 +308,7 @@ for account in accounts:
                           'Strategy':account['name']})
 ```
 
-### Results
+#### 5. Plotting Results
 
 
 ```python
@@ -243,70 +316,8 @@ final_df = pd.DataFrame(final_results)[['Strategy', 'Net Worth (MM)', 'Cash', 'S
 greedy_networth = final_df[final_df['Strategy']=='greedy']['Net Worth (MM)'][0]
 final_df['Net Worth Increase (%)'] = 100 * (final_df['Net Worth (MM)']/greedy_networth - 1)
 final_df
+# displays the table above
 ```
-
-
-<div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Strategy</th>
-      <th>Net Worth (MM)</th>
-      <th>Cash</th>
-      <th>Stock</th>
-      <th>Net Worth Increase (%)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>greedy</td>
-      <td>21.132840</td>
-      <td>0.001568</td>
-      <td>9931.732545</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>one_day</td>
-      <td>21.277338</td>
-      <td>0.001068</td>
-      <td>9999.641588</td>
-      <td>0.683758</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ten_day</td>
-      <td>21.686928</td>
-      <td>0.000653</td>
-      <td>10192.135118</td>
-      <td>2.621925</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>hundred_day</td>
-      <td>22.845556</td>
-      <td>0.000647</td>
-      <td>10736.651896</td>
-      <td>8.104521</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>thousand_day</td>
-      <td>24.231639</td>
-      <td>0.001233</td>
-      <td>11388.065063</td>
-      <td>14.663429</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-The startling result is that a *thousand* days of perfect foresight over a 25 year period only yields a *14.6% increase* in net worth. A thousand business days is roughly 4 years! 
-
 
 ```python
 for account in accounts:
@@ -329,8 +340,11 @@ plt.ylabel('Units of S&P500 Stock')
 plt.title('Stock Holdings over Time')
 ```
 
-
 <img src="/pics/output_15_1.png">
+
+This graph shows the stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn’t purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
+
+No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it most optimal to slowly accumulate stock. And it was during these long periods of incremental growth that all strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding.
 
 
 This graph shows the stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn't purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.

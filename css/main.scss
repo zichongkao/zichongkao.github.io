@@ -130,7 +130,8 @@ div.resource  h2{
 .site {
   text-align: justify;
   width: 48em;
-  margin: 2em auto 2em;
+  margin: auto;
+  padding: 1em;
   line-height: 1.5em;
 }
 
@@ -168,6 +169,7 @@ div.resource  h2{
 
 
 .footer {
+  font-family: 'Robato', sans-serif;
   font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
