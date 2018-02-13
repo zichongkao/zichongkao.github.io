@@ -98,7 +98,7 @@ No doubt these episodes allowed the buy-the-dip strategies to come out ahead. Ho
 The data analysis was quite straightforward. Here's the code in case you want to play around with it.
 
 #### 1. Preparing Data
-I obtained daily historical data of the S&P 500 from Yahoo Finance and did some basic preparation of the data. You can download it <a href='https://https://github.com/zichongkao/zichongkao.github.io/yahoo_s&p500_historical.csv'>here</a>.
+I obtained daily historical data of the S&P 500 from Yahoo Finance and did some basic preparation of the data. You can download it <a href='https://github.com/zichongkao/zichongkao.github.io/yahoo_sp500_historical.csv'>here</a>.
 
 
 ```python
