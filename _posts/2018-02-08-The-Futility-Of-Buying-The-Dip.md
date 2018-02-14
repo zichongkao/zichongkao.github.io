@@ -10,18 +10,18 @@ This is an analysis I did in 2016 to convince myself that buying the dip is smar
 ### Assumptions
 I made some very strong simplifying assumptions. You should feel free to skip this post if they seem too naive to you. I considered them reasonable given the level of effort, risk and sophistication that I desired, but they certainly don't make sense for everyone.
 1. I only looked at stocks, specifically the S&P500, as a proxy for an investment portfolio.
-2. I ignore dividends and only consider the capital gains of stock.
+2. I ignored dividends and only considered capital gains.
 3. I assumed that we don't use financial derivatives.
 4. I assumed a pure buy-and-hold strategy. We don't have to think about selling, only when to buy and how much.
 
 ### Strategies
-Assumption 4 simplifies things a lot, leaving us with one clean problem: Stock appreciates in the long run, so we want to figure out how to buy as much as possible, as cheaply as possible. Often this means buying as soon as possible except when we think it's going to be cheaper at some point in future.
+The naive way to study buying the dip would be to test out different ways of predicting dips. However, there are infinite techniques for making these predictions. So even if one strategy doesn't work, it doesn't negate the *class* of strategies.
 
-The naive way to study buying the dip would be to test out different ways of predicting (guessing) the dips. However, there are infinite techniques for making these predictions. So even if one strategy doesn't work, it doesn't negate the *class* of strategies.
+We can overcome this by reframing the problem: Forget about the individual strategies. Let's just test the perfect strategy against the naive strategy and see how they compare.
 
-We can overcome this by reframing the problem: Forget about the individual strategies. Let's just test the perfect strategy against the naive strategy and see how they compare. The perfect strategy is quite simply knowing the future, which we can test with the benefit of hindsight. In fact there are a range of perfect strategies depending on how far into the future the strategies are able to see. Each strategy then checks if there is a dip in sight, ie. a point were the price is the lowest, and saves up money to buy stock then.
+The perfect strategy is quite simply knowing the future, which we can model with the benefit of hindsight. At any point in time, the perfect strategy given knowledge of some period in future is to check if there is a lower price in sight. If so, keep saving for that upcoming dip. If not, we're at the bottom of any foreseeable dip so buy as much as possible. Remember that this is only optimal because we never sell and because we're ignoring dividends, so holding stock doesn't accrue any other benefits beyond capital appreciation.
 
-One the other end of the spectrum is the naive strategy that has absolutely no foresight. As mentioned before, if we have no idea about the future except that stock appreciates in the long run, the best we can do is to buy as much as possible right now.
+One the other end of the spectrum is the naive strategy that has absolutely no foresight. If we have no idea about the future except that stock appreciates in the long run, the best we can do is to buy as much as possible right now.
 
 In this analysis, I tested strategies with zero (naive), one, ten, hundred and thousand business days of foresight.
 
@@ -91,7 +91,7 @@ The graph below shows the net worth of the strategies over time. Observe how clo
 The next graph gives us a perspective of the underlying stock purchasing behavior of the strategies. In the lead-up to the dotcom crash, between 1998 and 2002, the thousand day buy-the-dip strategy was able to hoard cash. It didn't purchase any stock during that time and only went in heavily when the market was at its lowest. The same thing happened between 2004 and 2008 in the lead-up to the the great financial crisis.
 <img src="/pics/output_15_1.png">
 
-No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it optimal to slowly accumulate stock. It was during these long periods of incremental growth that *all* strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding and making the buy-the-dip strategies only marginally better than the naive strategy especially given all the work that they require.
+No doubt these episodes allowed the buy-the-dip strategies to come out ahead. However, the graph shows that for long stretches of time (1983 to 1998 and 2008 to 2016), the buy-the-dip strategies, even with all their unnatural foresight, still found it optimal to slowly accumulate stock. It was during these long periods of incremental growth that *all* strategies built up significant portions of their net worth, eventually dwarfing gains from the periods of hoarding. This is why buy-the-dip strategies were only marginally better, especially given all the work that they require.
 
 
 ### The Grunt Work
