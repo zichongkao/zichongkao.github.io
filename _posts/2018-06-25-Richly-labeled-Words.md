@@ -8,7 +8,7 @@ There is a class of words that I am fascinated by by which I struggle to precise
 
 My best description requires us to understand words as _labels_ with _meanings_, where labels are the sequence of characters that represent the word and meanings are the underlying references to concepts in the world. This class of words have labels that are borrowed from elsewhere. They may have once been closely tied to their origins, but have since drifted away, leaving modern observers feeling like there _ought_ to be connection between label and meaning, yet somehow unable to draw the link.
 
-s have found recovering these links to be immensely satisfying. The connection with their origins add important nuance to our understanding of their meanings; to the extent that reflecting on our earlier state of ignorance, we feel that we hadn't really grasped the word in the first place.
+I have found recovering these links to be immensely satisfying. Their origins add important nuance to our understanding; to the extent that reflecting on our earlier state of ignorance, we feel that we hadn't really grasped much of the word in the first place.
 
 Here is my collection of richly-labeled words:
 
