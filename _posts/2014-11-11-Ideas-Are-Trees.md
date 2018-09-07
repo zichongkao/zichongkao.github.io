@@ -9,11 +9,11 @@ A graph [1] is common way that people visualize a set of ideas. But I think that
 
 Most of the ideas we deal with in everyday life hang at the bottom of the tree. They are specific; they pertain to particular instances of more general ideas. They are the descendants of long lines of ideas that stretch far up beyond sight.
 
-This is why being rational is hard. Rationality requires justification - it means having to scale the long line of ideas to reach a point that your interlocutor, real or imagined, is satisfied with. We're climbing the tree, fighting gravity. It's hard work.
+This is why being rational is hard. Rationality requires justification &mdash; it means having to scale the long line of ideas to reach a point that your interlocutor, real or imagined, is satisfied with. We're climbing the tree, fighting gravity. It's hard work.
 
 But going from general to specific is easy. We just ride gravity downward.
 
-This also explains why we struggle to come up with original ideas. Most people generate new ideas by starting at their favorite leaf, ascending a few levels and then branching out. But because fighting gravity is hard, they don't go up very high before branching. This means that the new idea still shares the same parent or grandparent as the initial idea &mdash; it's an incestuous idea.
+This also explains why we struggle to come up with original ideas. Most people generate new ideas by starting at their favorite leaf, ascending a few levels and then branching out. But because fighting gravity is hard, they don't go up very high before branching. This means that the new idea still shares the same parent or grandparent and is not too different from the initial idea.
 
 An easier way to come up with original ideas is to begin from a position high up in the tree and exploit downward. But only a few activities in daily life make high-level ideas more accessible. Reading and writing are good examples. They invite the mind to engage abstract concepts, to probe around at altitude. From there, forking and riding gravity all the way down results in an entirely original line of thought.
 
