@@ -13,7 +13,7 @@ This is why being rational is hard. Rationality requires justification - it mean
 
 But going from general to specific is easy. We just ride gravity downward.
 
-This also explains why we struggle to come up with original ideas. Most people generate new ideas by starting at their favorite leaf, ascending a few levels and then branching out. But because fighting gravity is hard, they don't go up very high before branching. This means that the new idea still shares the same parent or grandparent as the initial idea. Basically it's an incestuous idea.
+This also explains why we struggle to come up with original ideas. Most people generate new ideas by starting at their favorite leaf, ascending a few levels and then branching out. But because fighting gravity is hard, they don't go up very high before branching. This means that the new idea still shares the same parent or grandparent as the initial idea &mdash; it's an incestuous idea.
 
 An easier way to come up with original ideas is to begin from a position high up in the tree and exploit downward. But only a few activities in daily life make high-level ideas more accessible. Reading and writing are good examples. They invite the mind to engage abstract concepts, to probe around at altitude. From there, forking and riding gravity all the way down results in an entirely original line of thought.
 
