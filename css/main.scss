@@ -213,25 +213,56 @@ div.resource  h2{
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
+  padding-top: 1em;
   overflow: hidden;
+
+  a {
+    color: #000;
+  }
 
   .contact {
     float: left;
     margin-right: 3em;
   }
 
-  .contact a {
-    color: #000;
-  }
-
-  .rss {
-    margin-top: 1.1em;
-    margin-right: -.2em;
+  .contact-right {
     float: right;
+    margin-left: 3em;
   }
 
-  .rss img {
-    border: 0;
+  #mc_embed_signup {
+    margin: 0 auto;
+    display: inline-block;
+    font-family: 'Robato', sans-serif;
+    color: #666;
+
+    label { display:block; color: #000; font-weight:bold; }
+    .mc-field-group { display: inline-block; }
+    .clear { display: inline-block; }
+
+
+    input {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      border: 1px solid #ddd;
+      padding: 2px;
+      font-family: 'Robato', sans-serif;
+      font-size: 100%;
+      color: #666;
+    }
+
+    input#mce-EMAIL {
+      min-width: 15em;
+    }
+    input#mce-EMAIL:focus { border-color:#333; }
+
+    input#mc-embedded-subscribe {
+    }
+
+    input#mc-embedded-subscribe:hover { cursor:pointer; }
+    #mce-error-response {display:none;}
+    #mce-success-response {color:#529214; display:none;}
   }
 }
 
