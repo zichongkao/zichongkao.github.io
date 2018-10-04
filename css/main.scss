@@ -214,7 +214,8 @@ div.resource  h2{
   border-top: 4px solid #eee;
   margin-top: 2em;
   padding-top: 1em;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 
   a {
     color: #000;
@@ -222,23 +223,23 @@ div.resource  h2{
 
   .contact {
     float: left;
-    margin-right: 3em;
+    margin-right: 2em;
   }
 
   .contact-right {
     float: right;
-    margin-left: 3em;
+    margin-left: 2em;
   }
 
   #mc_embed_signup {
-    margin: 0 auto;
+    margin-left: 0;
+    margin-right: auto;
     display: inline-block;
     font-family: 'Robato', sans-serif;
     color: #666;
 
     label { display:block; color: #000; font-weight:bold; }
     .mc-field-group { display: inline-block; }
-    .clear { display: inline-block; }
 
 
     input {
@@ -257,12 +258,17 @@ div.resource  h2{
     }
     input#mce-EMAIL:focus { border-color:#333; }
 
+    #mce-responses {
+      text-align: left;
+    }
+
     input#mc-embedded-subscribe {
+      margin-left: 2px;
     }
 
     input#mc-embedded-subscribe:hover { cursor:pointer; }
-    #mce-error-response {display:none;}
-    #mce-success-response {color:#529214; display:none;}
+    #mce-error-response { display:none;}
+    #mce-success-response { display:none; color:#529214; }
   }
 }
 
