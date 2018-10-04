@@ -2,6 +2,7 @@
 layout: nb_post
 date: 2018-02-08
 title: "The Futility of Buying the Dip"
+tags: investing
 ---
 
 ### Background

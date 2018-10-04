@@ -2,7 +2,7 @@
 layout: post
 title: "Metrics for Valuing Companies"
 date: 2015-07-25 02:54:49
-categories: investing
+tags: investing
 ---
 
 For a while now, I've been confused about the various measures of a company's book value. It doesn't help that financial accounting uses a whole bunch of terms that aren't very consistent. Here, I hope to consolidate in a single place, the most commonly used measures. I make no claim for being innovative or original - most of the material is copied off Wikipedia or Investopedia.

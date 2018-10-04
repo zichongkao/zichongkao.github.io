@@ -2,6 +2,7 @@
 layout: post
 title: "Sane Date Axes in Matplotlib"
 date: 2017-09-10
+tags: datascience
 ---
 
 Timeseries graphs are commonplace, but there doesn't seem to be a sane way to plot date axes in Matplotlib (<a href='https://stackoverflow.com/questions/38822294/getting-a-sane-default-date-axis-in-matplotlib'>and I'm not the only one who thinks so</a>). This is what the default plot produces:
