@@ -1,3 +1,16 @@
-name: Kao
+title: Kaomorphism
+email: zichongkao@gmail.com
+description: >-
+  The world through the lens of Kao.
+url: https://kaomorphism.com
+author: Kao
+
 highlighter: rouge
 markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
