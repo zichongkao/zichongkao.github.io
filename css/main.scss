@@ -34,7 +34,7 @@ body {
 
 @media all and (max-width: 599px) and (min-width: 320px) {
     body{
-        font-size: 12px;
+        font-size: 14px;
     }
 
 }
@@ -147,30 +147,10 @@ div.resource  h2{
 
 .site {
   text-align: justify;
-  width: 48em;
+  max-width: 40em;
   margin: auto;
   padding: 1em;
   line-height: 1.5em;
-}
-
-
-@media all and (min-width: 960px) {
-    .site {
-        width: 48em;
-    }
-}
-
-@media all and (max-width: 959px) and (min-width: 600px) {
-    .site {
-        width: 44em;
-    }
-}
-
-@media all and (max-width: 599px) and (min-width: 320px) {
-    .site {
-        width: 40em;
-    }
-
 }
 
 
@@ -304,7 +284,7 @@ p code {
 .post {
   list-style-type: none;
   margin-bottom: 2em;
-  width: 40em;
+  width: 100%;
 
   p {text-align: left;}
 
