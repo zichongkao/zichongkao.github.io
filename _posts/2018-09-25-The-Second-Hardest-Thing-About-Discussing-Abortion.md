@@ -18,7 +18,7 @@ From this perspective, I cannot help but be pessimistic that common ground will 
 
 The strange thing is that both of these beliefs already exist in most Americans. Roughly 75% of Americans are religious [1] but abortion is still legal. This suggests that many people are simultaneously religious and supportive of abortion. It is this group of people and the strength of their religious convictions that will determine the future of abortion in America.
 
-
+---
 Thanks to Olivia Angiuli for feedback on this essay.
 
 [1] <a href="https://news.gallup.com/poll/1690/religion.aspx">Gallup Study of Religion</a>

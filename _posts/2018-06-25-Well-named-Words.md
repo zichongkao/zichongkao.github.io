@@ -1,11 +1,11 @@
 ---
 layout: post
 date: 2018-06-25
-title: "Richly-labeled Words"
+title: "Well-named Words"
 tags: list
 ---
 
-I have long been fascinated by words whose labels have some obscure connection to their meanings. This is my collection of them:
+I have long been fascinated by words whose labels have some important connection to their meanings. On learning of this connection, one often feels like one hadn't really understood the word before. This is my collection of well-named words:
 
 Sandbagged
 ----------
