@@ -36,7 +36,7 @@ A few gems, but many are presently out of reach for me. Better luck on the third
 ## Questions
  - How can we improve hypothesis testing to take into account seasonality effects present in the responses of the control and treatment groups of an experiment?
  - During data analysis, one often has to decide on the most informative ways to segment the dataset. What is a good measure of high-signal segmentation? Can we apply information theory concepts like mutual information? What about machine learning classification? What if we need confidence intervals around these metrics?
- - Why is it when we use the sample variance to estimate the population variance, we need to renormalize by n/n-1? (See [Bassel's Correction](https://en.wikipedia.org/wiki/Bessel%27s_correction))
+ - Why is it when we use the sample variance to estimate the population variance, we need to renormalize by n/n-1? (See [Bassel's Correction](https://en.wikipedia.org/wiki/Bessel%27s_correction)) <a href="https://stats.stackexchange.com/q/87422">This</a> and <a href='https://stats.stackexchange.com/q/3932'>this</a> are halfway good answers.
  - What is it about statistics that makes it (seem?) so much harder to learn than, say, Physics?
 
 <br />
