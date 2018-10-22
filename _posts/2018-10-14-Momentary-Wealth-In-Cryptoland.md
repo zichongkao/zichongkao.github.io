@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2018-10-14
-title: "My Ethereum Story"
+title: "Momentary Wealth in Cryptoland"
 ---
 
 I was sitting in a darkened corner of the office late one night in 2014 when I picked up on a conversation that would come to have a significant impact on my life.
