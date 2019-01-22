@@ -65,11 +65,14 @@ ul  {list-style-position: inside;}
 
 table,td,tr,th {
   padding:0px;
-  border-collapse:collapse;
   text-align: left;
   font-weight : 400;
   font-size: 100%
   }
+
+table.sailing {
+  border-collapse:collapse;
+}
 
 th {
   font-weight: 700;

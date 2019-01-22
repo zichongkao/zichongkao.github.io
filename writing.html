@@ -6,9 +6,13 @@ title: Kao - Writing
 <div id="home">
   <h1>Writing</h1>
   <br>
-  <ul class="posts">
+  <table class="writing"><tbody>
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <tr>
+        <td style="width:6em">{{ post.date | date_to_string }}</td>
+        <td style="padding-right:0.25em"></td>
+        <td><span><a href="{{ post.url }}">{{ post.title }}</a></span></td>
+      </tr>
     {% endfor %}
-  </ul>
+  </tbody></table>
 </div>
