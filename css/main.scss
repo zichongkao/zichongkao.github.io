@@ -59,7 +59,7 @@ h4 {
 
 p {
   color: #222222;
-  margin: 1em 1em 0 0;
+  margin: 1em 1em 1em 0;
 }
 
 a         { color: #111; }
@@ -98,6 +98,10 @@ td.year{
 td.event{
   padding-left: 0.5em;
   width: 10em;
+}
+
+td.service{
+  padding-left: 0.5em;
 }
 
 td.role{
