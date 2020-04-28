@@ -16,7 +16,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: 'PT Serif', serif;
+  font-family: 'Garamond', serif;
   text-align: center;
 }
 
@@ -40,26 +40,31 @@ body {
 }
 
 h1 {
-  color: #ff6600;
-  font-size: 1.75em;
+  color: #111111;
+  font-size: 1.60em;
   font-family: 'Robato', sans-serif;
 }
 
 h2, h3 {
+  color: #111111;
   font-size: 1.30em;
   font-family: 'Robato', sans-serif;
 }
 
 h4 {
+  color: #111111;
   font-size: 1.20em;
   font-family: 'Robato', sans-serif;
 }
 
-p { margin: 1em 0; }
+p {
+  color: #222222;
+  margin: 1em 1em 0 0;
+}
 
-a         { color: #000; }
-a:hover   { color: #222; }
-a:visited { color: #000; }
+a         { color: #111; }
+a:hover   { color: #666; }
+a:visited { color: #111; }
 
 ul  {list-style-position: inside;}
 
@@ -75,6 +80,7 @@ table.sailing {
 }
 
 th {
+  padding-left: 0.5em;
   font-weight: 700;
 }
 
@@ -84,29 +90,20 @@ tr {
 }
 
 td.year{
+  padding-left: 0.5em;
   font-weight: 700;
-  width: 4em;
-}
-
-td.date{
-  font-weight: 700;
-  width: 7em;
-}
-
-td.route{
-  width: 20em;
-}
-
-td.grade{
-  width: 8em;
+  width: 2em;
 }
 
 td.event{
-  width: 14em;
+  padding-left: 0.5em;
+  width: 10em;
 }
 
 td.role{
-  width: 18em;
+  padding-left: 0.5em;
+  width: 12em;
+  padding-right: 0.5em;
 }
 
 div {
@@ -150,7 +147,7 @@ div.resource  h2{
 
 .site {
   text-align: left;
-  max-width: 40em;
+  max-width: 36em;
   margin: auto;
   padding: 1em;
   line-height: 1.5em;
