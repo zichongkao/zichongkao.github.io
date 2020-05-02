@@ -31,4 +31,6 @@ Basket Case
 -----------
 Often used as a generic insult, it actually means someone who is useless. It originated as a WWI slang describing soldiers who had lost all their limbs and needed to be carried around on a basket [(Source)](https://en.wiktionary.org/wiki/basket\_case). Makes you think twice about calling anyone a "basket case" eh?
 
-
+Windfall
+--------
+Originally referred to fruit that the wind blew from the trees. [(Source)](https://www.vocabulary.com/dictionary/windfall)
